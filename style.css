@@ -242,6 +242,7 @@ body {
 }
 
 /* Responsive for Mobile Devices */
+/* Responsive for Mobile Devices - Elite Fit Fix */
 @media (max-width: 768px) {
     .main-title { 
         font-size: 32px; 
@@ -252,13 +253,29 @@ body {
     .form-box { 
         padding: 24px; 
     }
+    
+    /* Mockup Container Fix for Mobile */
     .dashboard-mockup {
-        padding: 6px; /* Mobile ke liye padding kam ki taaki banner expand ho ske */
+        padding: 4px !important; /* Ekdam minimal padding taaki image dabe na */
+        height: auto !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    /* Absolute Image Aspect Ratio Fit */
+    .mockup-img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important; /* Bina squeeze ya stretch hue image ko scaling dega */
+        aspect-ratio: 16/4 !important; /* Banner ke rectangular structure ko lock karega */
+    }
+
+    /* Badge Alignment Fix */
     .mockup-overlay {
-        bottom: 10px;
-        right: 10px;
-        font-size: 10px;
-        padding: 4px 10px;
+        bottom: 6px !important;
+        right: 6px !important;
+        font-size: 9px !important;
+        padding: 2px 8px !important;
     }
 }
