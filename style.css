@@ -97,8 +97,9 @@ body {
 }
 
 .mockup-img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
     border-radius: 8px;
     display: block;
 }
@@ -115,6 +116,7 @@ body {
     font-size: 12px;
     font-weight: 600;
     color: #38bdf8;
+    z-index: 10;
 }
 
 /* ==========================================
@@ -241,7 +243,22 @@ body {
 
 /* Responsive for Mobile Devices */
 @media (max-width: 768px) {
-    .main-title { font-size: 32px; }
-    .hero-subtitle { font-size: 15px; }
-    .form-box { padding: 24px; }
+    .main-title { 
+        font-size: 32px; 
+    }
+    .hero-subtitle { 
+        font-size: 15px; 
+    }
+    .form-box { 
+        padding: 24px; 
+    }
+    .dashboard-mockup {
+        padding: 6px; /* Mobile ke liye padding kam ki taaki banner expand ho ske */
+    }
+    .mockup-overlay {
+        bottom: 10px;
+        right: 10px;
+        font-size: 10px;
+        padding: 4px 10px;
+    }
 }
